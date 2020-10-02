@@ -1,0 +1,32 @@
+Tarefa: MLP
+Brincar com playground e estudar as equações do backpropagation
+
+Ferramenta google: a neural network playground
+https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.78537&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false
+
+Dedução das equações:
+https://www.cs.swarthmore.edu/~meeden/cs81/s10/BackPropDeriv.pdf
+
+
+Meu estudo:
+- MLP é um percepetron de múltiplas camadas que permite solucionar sistemas linearmente NÂO separáveis;
+- O processo de back propagation calcula o erro de saída e ajusta os pesos das entradas na camada de saída;
+- É possível também calcular o erro da camada anterior e usa-lo para ajustar os pesos anteriores;
+- Os erros das camadas anteriores é proporcional ao erro da camada de saída. Tem uma fórmula relacionando-os;
+- No algorítmo de back propagation, o ajuste dos pesos também é feito a partir do gradiente descendente;
+- Perceptron com saída rígida utiliza: dw = eta * erro * xi;
+- Perceptron com saída sigmoidal e ADALINE utilizam: dw = eta * delta * xi (delta = derivada * erro) (ADA derivada = 1).
+
+
+Equacionamento:
+- m = número de neurônios na camada escondida
+- u = sum(i=1:m)(xi*wi), se a saída possuir somente uma dimensão. xi é hi caso se trate da camada de saída;
+- erro = yd - f(u), f(x) normalmente é a função sigmoide;
+- A equação de ajuste dos pesos na camada de saída em uma dimensão é a equação: dwi = -1 * erro * f'(u) * hi (i corresponde ao neurônio em questão)
+- A equação de ajuste dos pessos nas camadas intermediárias será: dwi = eta * deltai * xi 
+	deltai = hi'(ui) * erro * f'(u) * wi (i é o neurônio em questão, ui = xi*wi e u = sum(i=1:m)(xi*wi) )
+	xi é a entrada do neurônio em questão
+
+30:00 vídeo
+ 
+

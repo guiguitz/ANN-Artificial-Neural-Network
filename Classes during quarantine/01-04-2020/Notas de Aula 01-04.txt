@@ -1,0 +1,43 @@
+Link recomendado: https://www.youtube.com/watch?v=54XLXg4fYsc
+
+
+Pegando dados online:
+
+rm(list = ls())
+library(readxl)
+library(httr)
+# library(utils)
+# library(tidyverse, lubridate)
+# library(ggplot2, reshape2)
+
+#create the URL where the dataset is stored with automatic updates every day
+url <- paste("https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-",format(Sys.time(), "%Y-%m-%d"), ".xlsx", sep = "")
+#download the dataset from the website to a local temporary file
+GET(url, authenticate(":", ":", type="ntlm"), write_disk(tf <- tempfile(fileext = ".xlsx")))
+#read the Dataset sheet into “R”
+data <- read_excel(tf)
+
+#### Números gerais
+totalcases<-sum(data$cases)
+totaldeaths<-sum(data$deaths)
+######################
+
+#Conversão de formato de data
+data$dateRep <- as.Date(data$dateRep)
+# Ordenação por data
+data <- data[order(data$dateRep),]
+
+#--------------------------------------------------------------------------
+
+#Conversão de formato de data
+data$dateRep <- as.Date(data$dateRep)
+# Ordenação por data
+data <- data[order(data$dateRep),]
+
+#Conversão da variável País para fator.
+#Facilita queries.
+data$countriesAndTerritories = as.factor(data$countriesAndTerritories)
+
+xbrasil<-data[which(data$countriesAndTerritories == "Brazil"),]
+
+totcasosBrasil<-sum(xbrasil$cases)

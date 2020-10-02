@@ -1,0 +1,20 @@
+Notas aula 13-05-2020:
+
+Links:
+- https://medium.com/@Cambridge_Spark/tutorial-introduction-to-missing-data-imputation-4912b51c34eb
+- https://www.scielo.br/scielo.php?pid=S0103-17592011000500002&script=sci_abstract
+
+Termos:
+- Acuraça: Soma dos erros quadráticos, gradiente descendente
+- Gradiente descendente: "Back propagation"
+- Aumentando muito a dimensão tende a overfit
+- Buscar: "Extreme learning machine" para ter artigos sobre este assunto
+
+Code:
+- p é o número de neuronios
+- Z: Matriz com pesos iniciados aleatoriamente
+- H é a projeção de cada ponto no espaço da camada escondida
+
+Exercío:
+- Gerar ~140 pontos pra treinar e ~140 pontos pra testar (imagem 6)
+

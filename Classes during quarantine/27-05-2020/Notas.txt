@@ -1,0 +1,12 @@
+
+Notas:
+- Estudar diferença Adeline e Perceptron
+- Regularização: Estudar
+- Usar mais um for na validaão cruzada (por número de neurônios)
+
+
+calcLOO <- function(P,y,N) ((t(y) %*% P %*% (t(solve(diag(diag(P)))) %*% solve(diag(diag(P)))) %*% P %*% y)/N)
+
+xx<-matrix(runif(9),nrow=3,ncol=3)
+diag(diag(xx))
+

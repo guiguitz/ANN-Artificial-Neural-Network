@@ -1,0 +1,3 @@
+- Método do gradiente descendente 
+- Os casos acumulador têm o formato de uma gigmóide
+- 

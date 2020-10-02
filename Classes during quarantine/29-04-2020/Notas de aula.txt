@@ -1,0 +1,21 @@
+Termos novos:
+-"Discretizando"
+-"Dicotomia"
+Gaussiana com média em 2
+trashold
+
+
+Exercício 1:
+-Usar o perceptron original
+-Se usar a sigmoíde, pegar os valores de resposta(entre 0 e 1) e dividir em duas regiões, já que a sigmóide é simétrica
+-Passar pra função do perceptron com vetores colunas
+-Gerar pontos em 
+-Matiz de 60 linhas e colunas x1,x2
+-y vetor de 60 linhas
+-Resultado é um vetor com w1,w2 e teta
+-Para olotar superfície tem que fazer um grid
+
+
+Exercício 2:
+-Classe 1: Primeiras 50 variáveis e a classe dois é de 50 até 150(100)
+-Remover 10 de cada classe de forma aleatória(treinar com 130) e avalia o desmpenho coms as 20

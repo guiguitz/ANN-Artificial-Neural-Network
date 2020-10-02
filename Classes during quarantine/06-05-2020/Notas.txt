@@ -1,0 +1,29 @@
+Instalar pacote:
+library(mlbench)
+
+Termos:
+-"Acuraça"
+
+Teoria:
+-A classe com mais pontos tende a ser melhor definida
+-Replicação de amostras pode melhor definir uma classe com poucos dados
+-w parameters: theta,w1,w2
+-Line equation: y = ax + b (a=-w1/w2, b=theta/w2)
+
+
+Exercício1:
+-Reescrever o código do perceptron
+-Apresentar o desempenho por classe
+-Observar se o desbalanceamento tem algum efeito no desempenho
+-Plot erros(gui)
+
+Exercício2:
+-Descobrir qual variável separa melhor as classes
+-sf = Score de Fischer
+-m1 = média de mitoses classe 1
+-m2 = média de mitoses classe 2
+-m = média global
+-s1 = variância de mitoses classe 1
+-s2 = variância de mitoses classe 2
+
+https://sciencing.com/calculate-variance-4884715.html

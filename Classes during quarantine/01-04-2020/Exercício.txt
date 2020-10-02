@@ -1,0 +1,65 @@
+-Estimar quando a tendencia vai reverter do coronavirus
+-Alterar os valores da geradora, x e y
+
+
+
+
+treinap <- function(xin,yd,eta,tol,maxepocas,par)
+# Rotina de treinamento do Perceptron simples.
+# xin: matriz Nxn com os dados de entrada
+# yd: rótulos de saída (0 ou 1)
+# eta: passo de treinamento
+# tol: tolerância de erro
+# maxepocas: número máximo de iterações
+# par: parâmetro de entrada.
+# par=0 ==> xin tem dimensão n+1 e já inclui
+# entrada correspondente ao termo
+# de polarização.
+# par=1 ==> xin tem dimensão n e não inclui
+# entrada correspondente ao termo de
+# polarização, que deve ser adicionado
+# dentro da função.
+
+{
+dimxin<-dim(xin) # Dimensões do conjunto de dados.
+N<-dimxin[1] # Número de amostras.
+n<-dimxin[2] # Dimensão de entrada.
+
+# Adiciona ou não termo de polarização ao vetor de
+# treinamento w.
+if (par==1){
+wt<-as.matrix(runif(n+1)-0.5)
+xin<-cbind(-1,xin)
+}
+else wt<-as.matrix(runif(n)-0.5)
+
+nepocas<-0
+eepoca<-tol+1
+# Initialize error vector.
+evec<-matrix(nrow=1,ncol=maxepocas)
+while ((nepocas < maxepocas) && (eepoca>tol))
+{
+ei2<-0
+# Random sequence for training.
+xseq<-sample(N)
+for (i in 1:N)
+{
+# Pattern from random sequence.
+irand<-xseq[i]
+yhati<-as.double((xin[irand,] %*% wt) >= 0)   --  Remover degrau, remover >=0, 
+ei<-yd[irand]-yhati
+dw<-eta*ei*xin[irand,]      -  Falta multiolicar pela derivada
+# Weight update
+wt<-wt+dw
+# Accumulate error.
+ei2<-ei2+ei*ei
+}
+# Number of epochs.
+nepocas<-nepocas+1
+evec[nepocas]<-ei2/N
+# Error per epoch.
+eepoca<-evec[nepocas]
+}
+retlist<-list(wt,evec[1:nepocas])
+return(retlist)
+}

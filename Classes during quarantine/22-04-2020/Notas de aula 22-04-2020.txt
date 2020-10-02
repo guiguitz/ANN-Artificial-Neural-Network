@@ -1,0 +1,19 @@
+Exercício: A partir do algorítmo adaline, encontrar a matriz de coeficientes w. Adaline tem o msm algorítmo
+que o Perceptron. A única diferença está na função de ativação, que a derivada passa agora a ser 1.
+
+
+
+Exercício 1:
+Sistema: y = 4*x + 2
+
+
+Exercício 2:
+Funão geradora que não se conhece:
+t<-seq(0,2*pi,0.1*pi)
+x1<-matrix(sin(t)+cos(t),ncol = 1)
+x2<-matrix(tanh(t),ncol = 1)
+x3<-matrix(sin(4*t),ncol = 1)
+x4<-matrix(abs(sin(t)),ncol = 1)
+
+y<-x1+2*x2+0.8*x3+3.2*x4+pi/2
+
