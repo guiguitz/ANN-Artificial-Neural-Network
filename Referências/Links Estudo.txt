@@ -1,0 +1,5 @@
+Introdução a Redes Neurais Artificiais:
+http://computacaointeligente.com.br/artigos/redes-neurais-artificiais/
+
+A máquina de aprendizado extremo - ELM:
+http://computacaointeligente.com.br/algoritmos/maquina-de-aprendizado-extremo/
