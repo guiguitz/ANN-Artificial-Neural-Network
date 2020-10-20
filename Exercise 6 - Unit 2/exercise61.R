@@ -8,9 +8,9 @@ rm(list = ls())
 library(mlbench)
 library('corpcor')
 
-source("C:/Users/gvamorim/Google Drive/UFMG/Redes Neurais Artificiais/Algorithms/perceptron.R")
-source("C:/Users/gvamorim/Google Drive/UFMG/Redes Neurais Artificiais/Algorithms/ELM.R")
-source("C:/Users/gvamorim/Google Drive/UFMG/Redes Neurais Artificiais/Algorithms/usefulroutines.R")
+source("C:/Users/gvamorim/Documents/Personal/Repositories/ANN-Artificial-Neural-Network/Algorithms/perceptron.R")
+source("C:/Users/gvamorim/Documents/Personal/Repositories/ANN-Artificial-Neural-Network/Algorithms/ELM.R")
+source("C:/Users/gvamorim/Documents/Personal/Repositories/ANN-Artificial-Neural-Network/Algorithms/usefulroutines.R")
 
 #----------------------------------------------------------------------
 

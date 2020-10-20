@@ -1,6 +1,6 @@
 rm(list=ls())
 library("mlbench")
-source("C:/Users/gvamorim/Google Drive/UFMG/Redes Neurais Artificiais/Algorithms/RBF.R")
+source("C:/Users/gvamorim/Documents/Personal/Repositories/ANN-Artificial-Neural-Network/Algorithms/RBF.R")
 library('RSNNS') #Fornece a rotina para validação 
 
 ams1 <- mlbench.2dnormals(200)

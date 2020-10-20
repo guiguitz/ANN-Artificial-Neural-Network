@@ -1,3 +1,5 @@
+library('corpcor') # pseudoinverse
+
 ## Extreme Learning Machine Parameters
 extremeLearningMachineParameters <- function(X, Y, p){
   
@@ -19,4 +21,20 @@ extremeLearningMachineParameters <- function(X, Y, p){
 
 extremeLearningMachineOutput <- function(H, W){
   return(sign(H %*% W))
+}
+
+extremeLearningMachineZ <- function (X, p){
+  n_dim<-dim(X)[2]
+  Z <- replicate(p, runif(n_dim+1, -0.5, 0.5))
+  return(Z)
+}
+
+extremeLearningMachineH <- function (X, Z){
+  H <- tanh(cbind(1, X) %*% Z)
+  return(H)
+}
+
+extremeLearningMachineW <- function (H, Y){
+  W <- pseudoinverse(H) %*% Y
+  return(W)
 }
