@@ -48,7 +48,6 @@ trainperceptron <- function(xin,yd,eta,tol,maxepocas,par){
   }
   retlist<-list(wt,evec[1:nepocas])
   return(retlist)
-  
 }
 
 yperceptron <- function(xvec,w,par){
