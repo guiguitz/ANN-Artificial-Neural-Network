@@ -38,3 +38,8 @@ extremeLearningMachineW <- function (H, Y){
   W <- pseudoinverse(H) %*% Y
   return(W)
 }
+
+extremeLearningMachineError <- function (Y, YHat){
+  error <- (sum(abs(Y-YHat)))/(2*length(Y))
+  return(error)
+}

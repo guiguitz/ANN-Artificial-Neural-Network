@@ -91,3 +91,9 @@ yMLP <- function(X, MLP, func_ati)
   }
   return (YTestHat)
 }
+
+errorMLP <- function(Y, YHat)
+{
+  error <- (sum(abs(Y-YHat)))/(2*length(Y))
+  return(error)
+}
