@@ -1,0 +1,36 @@
+Breast:
+
+Perceptron:  
+  Training Error:  0.02761506 +/- 0.0009355933 
+  Testing Error:   0.02731707 +/- 0.01745224
+ELM:  
+  Training Error:  0.02018828 +/- 0.00247302 
+  Testing Error:   0.0104878 +/- 0.003634926
+RBF:  
+  Training Error:  0.1614431 +/- 2.533796e-05 
+  Testing Error:   0.234397 +/- 3.874667e-06
+MLP:  
+  Training Error:  0.04544296 +/- 0.002441397 
+  Testing Error:   0.02807882 +/- 0.0008112972
+
+Traffic:
+
+Perceptron:  
+  Training Error:  0.05744681 +/- 0.009515183 
+  Testing Error:   0.4195122 +/- 0.04363059
+ELM:  
+  Training Error:  0.03191489 +/- 0 
+  Testing Error:   0.3621951 +/- 0.02134376
+RBF:  
+  Training Error:  0.09738651 +/- 0.01820119 
+  Testing Error:   0.07405202 +/- 0.01537174
+MLP:  
+  Training Error:  0.04761631 +/- 0.002429073 
+  Testing Error:   0.4092539 +/- 0.02406189
+
+
+
+wine
+RBF:  
+  Training Error:  0.241374 +/- 0.0001050412 
+  Testing Error:   0.2411015 +/- 4.64541e-05
